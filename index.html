@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Spiral graph with Canvas & JavaScript</title>
+	</head>
+	<body>
+		<!-- the table,rows & cells is for center the content -->
+		<table width="100%" height="100%">
+			<tr height="100%">
+				<td align="center">
+					<!-- the position of the image is 80 over the top -->
+					<img id="mimg" src="./dot.png" style="position:absolute;top:-80;"></img>
+					<!-- id is important to get canvas object. In style is setted alpha 100% or opacity 0%-->
+					<canvas id="mcanvas" width="400" height="500" style="background-color:rgba(203, 233, 247, 0);"></canvas>
+					
+					<script src="Spiral.js"></script>
+					<script>
+						mcanvas = document.getElementById('mcanvas');
+						mimg = document.getElementById('mimg');
+						
+						var dr = 20;
+						var velocity = 500;
+						
+						Spiral_ini(mcanvas, mimg);
+						Spiral_start(mcanvas.width/2, mcanvas.height/2, velocity, dr);
+					</script>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
